@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Mobile-friendly viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYPTOSPACESHIP - My fleet</title>
+    <!-- Style sheet link -->
+    <link href="assets/css/main.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600" rel="stylesheet">
+</head>
+
+<body>
+    <div class="svg-legend" aria-hidden="true">
+        <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <symbol id="icon-twitter" viewBox="0 0 40 32">
+                    <title>twitter</title>
+                    <path d="M39.922 3.811c-1.475 0.638-3.050 1.073-4.708 1.271 1.69-1.002 2.99-2.582 3.605-4.467-1.585 0.91-3.342 1.573-5.211 1.942-1.493-1.573-3.622-2.557-5.985-2.557-4.528 0-8.2 3.614-8.2 8.066 0 0.64 0.075 1.255 0.212 1.844-6.816-0.317-12.858-3.538-16.901-8.409-0.712 1.184-1.11 2.561-1.11 4.060 0 2.805 1.45 5.271 3.647 6.719-1.345-0.043-2.61-0.407-3.713-1.011v0.1c0 3.912 2.822 7.175 6.576 7.918-0.688 0.182-1.415 0.28-2.16 0.28-0.523 0-1.025-0.049-1.527-0.141 1.052 3.204 4.075 5.54 7.673 5.605-2.8 2.164-6.348 3.453-10.17 3.453-0.65 0-1.298-0.038-1.95-0.11 3.648 2.287 7.946 3.624 12.594 3.624 15.089 0 23.331-12.297 23.331-22.943 0-0.343 0-0.689-0.025-1.033 1.602-1.13 3-2.559 4.1-4.18l-0.078-0.033z"></path>
+                </symbol>
+                <symbol id="icon-facebook" viewBox="0 0 32 32">
+                    <title>facebook</title>
+                    <path d="M30.235 0h-28.469c-0.975 0-1.765 0.791-1.765 1.765v28.469c0 0.976 0.791 1.765 1.765 1.765h15.325v-12.392h-4.172v-4.828h4.172v-3.567c0-4.132 2.525-6.38 6.212-6.38 1.767 0 3.285 0.129 3.728 0.188v4.32h-2.561c-2 0-2.389 0.961-2.389 2.361v3.081h4.779l-0.62 4.84h-4.159v12.376h8.153c0.977 0 1.767-0.789 1.767-1.765v-28.469c0-0.975-0.789-1.765-1.765-1.765z"></path>
+                </symbol>
+            </defs>
+        </svg>
+    </div>
+    <!-- HEADER -->
+    <header id="site-header" role="banner">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/cryptospaceship.svg" alt="CRYPTOSPACESHIP">
+                </a>
+            </div>
+            <div class="toggle-menu">
+                <button type="button" role="button" aria-label="Toggle Navigation" class="menu-hamburger">
+                    <span class="lines"></span>
+                </button>
+            </div>
+            <div class="navigation">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a>
+                            <ul>
+                                <li><a href="about.html#crew">CREW</a></li>
+                                <li><a href="about.html#thegame">THE GAME</a></li>
+                                <li><a href="about.html#whitepaper">WHITE PAPER</a></li>
+                                <li><a href="about.html#faqs">FAQs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sign-menu">
+                <ul>
+                    <li><a href="login.html">LOG IN</a></li>
+                    <li><a href="signup.html">SIGN UP</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="fix-element"></div>
+    <!-- MAIN CONTENT -->
+    <main id="site-main" role="main" class="interior">
+        <div class="container">
+            <div class="ship-page">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="back">
+                        <a href="fleet.html">
+                        Back to my fleet
+                    </a>
+                    </div>
+                    <div class="title-left">
+                        <h1>Millennium Falcon</h1>
+                    </div>
+                </div>
+                <div class="ship-bg">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <h2 class="ship-id">97e5qq99wq4wq</h2>
+                        <div class="ship-image">
+                            <input type="color" id="picker">
+                            <img id="capa-0" src="assets/images/capa0.png" alt="Ship" width="640" height="320px" />
+                            <canvas id="capa-1" width="640" height="320px" /></canvas>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="ship-status">
+                            <div class="col-xs-12 col-sm-7 col-md-7 stats">
+                                <h3>_Stats</h3>
+                                <div class="numbers">
+                                    <div class="column">
+                                        <div class="status">
+                                            <p class="info-title">Wins :</p>
+                                            <p class="number">023</p>
+                                        </div>
+                                        <div class="status">
+                                            <p class="info-title">Looses :</p>
+                                            <p class="number">023</p>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="status">
+                                            <p class="info-title">Bloque de botadura :</p>
+                                            <p class="number bloque">008</p>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="status">
+                                            <p class="info-title">Gen :</p>
+                                            <p class="number">033</p>
+                                        </div>
+                                        <div class="status">
+                                            <p class="info-title">Takedowns :</p>
+                                            <p class="number">023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="level-progress">
+                                    <p>Level Progress</p>
+                                    <div class="bar">
+                                        <div class="progress-bar"></div>
+                                    </div>
+                                </div>
+                                <a href="#modulo-qia" class="btn blue modulo-qia">QIA Modules</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-5 col-md-5 current-mission">
+                                <h3>_Current Mission</h3>
+                                <a href="#join-game" class="btn join-game">Go to game</a>
+                                <p>started on</br>
+                                    January 12 at 0350 hours</p>
+                                <a href="#exit-game" class="btn blue exit-game">EXIT GAME</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="image-footer">
+            <img src="assets/images/footer-mobile.png" alt="" class="mobile">
+            <img src="assets/images/footer-desktop.png" alt="" class="desktop">
+        </div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="layout-invert">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <ul class="footer-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                        <ul class="footer-nav desktop">
+                            <li><a href="login.html">Login In</a></li>
+                            <li><a href="signup.html">Sign Up</a></li>
+                        </ul>
+                        <div class="copy">
+                            <p>Copyright © 2018 CryptoCup</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#">
+                                    <svg class="icon icon-facebook">
+                                        <use xlink:href="#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="icon icon-twitter">
+                                        <use xlink:href="#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modulo QIA 1-->
+    <div style="display:none">
+        <div id="modulo-qia" class="modal">
+            <form action="#" method="post" class="modal-container modulos">
+                <div class="form-modal">
+                    <h5>Modulos QIA</h5>
+                    <p>_Asigna Puntos</p>
+                    <p class="description">Textito explicativoLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit </p>
+                    <div class="group-input">
+                        <label for="address">No tienes puntos para asignar</label>
+                        <div class="column"> 
+                            <div class="points">
+                                <div class="text">
+                                    <p class="title">Ataque</p>
+                                    <p class="description">Aumenta el Ataque</p>
+                                </div>
+                                <div class="asignar">
+                                    <p class="number">023</p>
+                                    <a href="#" class="plusOne disabled">+1</a>
+                                </div>
+                            </div>
+                            <div class="points">
+                                <div class="text">
+                                    <p class="title">Ataque</p>
+                                    <p class="description">Aumenta el Ataque</p>
+                                </div>
+                                <div class="asignar">
+                                    <p class="number">023</p>
+                                    <a href="#" class="plusOne disabled">+1</a>
+                                </div>
+                            </div>
+                            <div class="points">
+                                <div class="text">
+                                    <p class="title">Ataque</p>
+                                    <p class="description">Aumenta el Ataque</p>
+                                </div>
+                                <div class="asignar">
+                                    <p class="number">023</p>
+                                    <a href="#" class="plusOne disabled">+1</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column"> 
+                            <div class="points">
+                                <div class="text">
+                                    <p class="title">Ataque</p>
+                                    <p class="description">Aumenta el Ataque</p>
+                                </div>
+                                <div class="asignar">
+                                    <p class="number">023</p>
+                                    <a href="#" class="plusOne disabled">+1</a>
+                                </div>
+                            </div>
+                            <div class="points">
+                                <div class="text">
+                                    <p class="title">Ataque</p>
+                                    <p class="description">Aumenta el Ataque</p>
+                                </div>
+                                <div class="asignar">
+                                    <p class="number">023</p>
+                                    <a href="#" class="plusOne disabled">+1</a>
+                                </div>
+                            </div>
+                            <div class="points">
+                                <div class="text">
+                                    <p class="title">Ataque</p>
+                                    <p class="description">Aumenta el Ataque</p>
+                                </div>
+                                <div class="asignar">
+                                    <p class="number">023</p>
+                                    <a href="#" class="plusOne disabled">+1</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn closeModal">OK</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Join Game Modal-->
+    <div style="display:none">
+        <div id="join-game" class="modal">
+            <form action="#" method="post" class="modal-container">
+                <div class="form-modal">
+                    <h5>Join a game</h5>
+                    <p>_Select your next adventure</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
+                    <div class="group-input">
+                        <label for="address">GAME</label>
+                        <select>
+                            <option selected>Select an option</option>
+                            <option>Game 1</option>
+                            <option>Game 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <input type="submit" id="submit" value="LOG IN" name="submit">
+                    <button type="button" class="btn blue closeModal">CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Exit Game Modal-->
+    <div style="display:none">
+        <div id="exit-game" class="modal">
+            <form action="#" method="post" class="modal-container">
+                <div class="form-modal">
+                    <h5>Exit game</h5>
+                    <p>_estas seguro que queres salir del juego?</p>
+                </div>
+                <div class="buttons">
+                    <input type="submit" id="submit" value="Yes, EXIT GAME" name="submit">
+                    <button type="button" class="btn blue closeModal">No, CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/functions.min.js"></script>
+    <script type="text/javascript">
+        function hexToRgb(hex) {
+            var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+            hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+                return r + r + g + g + b + b;
+            });
+
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+
+        // Constante para la capa1
+        window.layer_1 = "assets/images/capa1.png";
+
+        window.onload = function() {
+            document.getElementById("picker").addEventListener("input", function() {
+                result = hexToRgb(this.value);
+                changeColor("capa-1", result.r, result.g, result.b);
+            });
+        }
+
+        /*
+         * Handler para el Evento de cambio de color
+         */
+        function changeColor(canvasId, r, g, b) {
+
+            var image = new Image();
+            var canvas = document.getElementById(canvasId);
+            image.crossOrigin = "Anonymous";
+            image.src = window.layer_1;
+            image.onload = function() {
+                compose(image, canvas, r, g, b);
+            }
+        }
+
+        function compose(image, canvas, r, g, b) {
+            var ctx = canvas.getContext("2d");
+
+            ctx.drawImage(image, 0, 0);
+            var id = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+            for (var i = 0; i < id.data.length; i += 4) {
+                /*
+                 * ¿Que estoy haciendo aca? El PNG es una imagen con trasparencia.
+                 * entonces todo lo que no es transparencia hay que cambiarle el color
+                 */
+                if (id.data[i + 3] != 0) {
+                    id.data[i] = r;
+                    id.data[i + 1] = g;
+                    id.data[i + 2] = b;
+                }
+            }
+            /*
+             * Dibujo la nueva imagen
+             */
+            ctx.putImageData(id, 0, 0);
+        }   
+    </script>
+</body>
+
+</html>
