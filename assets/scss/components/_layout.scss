@@ -7,17 +7,33 @@ body {
     background-image: url('../images/fullbg.png');
     background-color: $color-base;
     background-position: center center;
-    background-size: cover;
-    background-repeat: repeat-x;
+    background-size: contain;
+    background-repeat: repeat-y;
 }
 
 main {
-    min-height: 100px;
+    padding: 40px 0 20px;
+
+    @media (min-width: $bp-m) {
+        padding: 0 0 20px;
+    }
+
+    &.interior {
+        padding: 20px 0;
+    }
+
+    &.home-page {
+        padding:0;
+        overflow:hidden;
+
+        @media (min-width: $bp-m) {
+            margin-top:-70px;
+        }
+
+    }
 }
 
-.interior {
-    padding:20px 0;
-}
+
 
 
 /* ================================================================
@@ -25,14 +41,59 @@ main {
    ================================================================ */
 
 .main-title {
-    //width: calc(100% - 3em);
-    //position:fixed;
-    width:100%;
+    position: fixed;
+    width: 100%;
     text-align: center;
+    top: 70px;
+    z-index: 50;
+
+    &.fixed {
+        h1 {
+            background-color: rgba($color-primary, 0.60);
+
+            &:before {
+                background-image: url('../images/title-bf-mobile-fixed.svg');
+
+                @media (min-width: $bp-mw) {
+                    background-image: url('../images/title-bf-desktop-fixed.svg');
+
+                }
+            }
+
+            &:after {
+                background-image: url('../images/title-af-mobile-fixed.svg');
+
+                @media (min-width: $bp-mw) {
+                    background-image: url('../images/title-af-desktop-fixed.svg');
+                }
+            }
+        }
+    }
+
+    @media (min-width: $bp-m) {
+        position: static; 
+        top: -70px;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transition: all .5s ease-in;
+        transition: all .5s ease-in;
+        -webkit-backface-visibility: hidden;
+
+        &.fixed {
+            width: 100%;
+            z-index: 100;
+
+            position: fixed;
+            top: 70px;
+
+            -webkit-overflow-scrolling: touch;
+            -webkit-transition: all .5s ease-in;
+            transition: all .5s ease-in;
+            -webkit-backface-visibility: hidden;
+        }
+    }
 
     h1 {
-        
-        text-transform:uppercase; 
+        text-transform: uppercase;
         display: inline-block;
         text-align: center;
         font-weight: $fontWeight-light;
@@ -47,9 +108,17 @@ main {
         border-top: 1px solid $color-primary;
         position: relative;
 
-        @media (min-width: $bp-mw) { 
+        -webkit-overflow-scrolling: touch;
+        -webkit-transition: top .5s ease-in-out;
+        transition: top .5s ease-in-out;
+        -webkit-backface-visibility: hidden;
+
+        min-width:160px;
+
+        @media (min-width: $bp-mw) {
             @include x-rem(font-size, 32px);
             line-height: 40px;
+            min-width:210px;
         }
 
         &:before {
@@ -60,9 +129,13 @@ main {
             width: 24px;
             left: -24px;
             top: -1px;
+            -webkit-overflow-scrolling: touch;
+            -webkit-transition: top .5s ease-in-out;
+            transition: top .5s ease-in-out;
+            -webkit-backface-visibility: hidden;
 
             @media (min-width: $bp-mw) {
-                background-image:url('../images/title-bf-desktop.svg');
+                background-image: url('../images/title-bf-desktop.svg');
                 height: 52px;
                 width: 31px;
                 left: -31px;
@@ -77,14 +150,36 @@ main {
             width: 24px;
             right: -24px;
             top: -1px;
+            -webkit-overflow-scrolling: touch;
+            -webkit-transition: top .5s ease-in-out;
+            transition: top .5s ease-in-out;
+            -webkit-backface-visibility: hidden;
 
             @media (min-width: $bp-mw) {
-                background-image:url('../images/title-af-desktop.svg');
+                background-image: url('../images/title-af-desktop.svg');
                 height: 52px;
                 width: 31px;
                 right: -31px;
             }
         }
     }
-}
 
+    @media (min-width: $bp-m) {
+        &.about-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.fixed {
+                .about-menu {
+                    top: -1px;
+                }
+            }
+
+            h1 {
+                position: relative;
+                z-index: 5;
+            }
+        }
+    }
+}

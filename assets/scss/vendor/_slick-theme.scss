@@ -19,6 +19,7 @@ $slick-opacity-not-active: 0.25 !default;
     @if function-exists(image-url) {
         @return image-url($url);
     }
+
     @else {
         @return url($slick-loader-path + $url);
     }
@@ -28,6 +29,7 @@ $slick-opacity-not-active: 0.25 !default;
     @if function-exists(font-url) {
         @return font-url($url);
     }
+
     @else {
         @return url($slick-font-path + $url);
     }
@@ -58,6 +60,7 @@ $slick-opacity-not-active: 0.25 !default;
         width: 60px;
         top: calc(50% - 30px);
     }
+
     &.slick-disabled {
         opacity: 0.5;
     }
@@ -75,7 +78,14 @@ $slick-opacity-not-active: 0.25 !default;
         right: -25px;
     }
 
-    &:hover{
+    &:focus {
+        background-image: url('../images/arrow-prev.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+    }
+
+    &:hover {
         outline: none;
         color: transparent;
         background-image: url('../images/arrow-prev-hover.svg');
@@ -85,6 +95,7 @@ $slick-opacity-not-active: 0.25 !default;
 
     @media (min-width: $bp-l) {
         left: 0;
+
         [dir="rtl"] & {
             right: 0px;
             auto: auto;
@@ -102,7 +113,15 @@ $slick-opacity-not-active: 0.25 !default;
         left: -25px;
         right: auto;
     }
-    &:hover{
+
+    &:focus {
+        background-image: url('../images/arrow-next.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+    }
+
+    &:hover {
         outline: none;
         color: transparent;
         background-image: url('../images/arrow-next-hover.svg');
@@ -112,6 +131,7 @@ $slick-opacity-not-active: 0.25 !default;
 
     @media (min-width: $bp-l) {
         right: 0;
+
         [dir="rtl"] & {
             left: 0px;
             right: auto;

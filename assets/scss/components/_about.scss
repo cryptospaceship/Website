@@ -1,0 +1,642 @@
+/* ******************************************************
+   ABOUT
+   ****************************************************** */
+
+.about-menu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba($color-primary, 0.25);
+    border-bottom: 1px solid $color-primary;
+    border-top: 1px solid $color-primary;
+    height: 40px;
+    width: 90%;
+    position: absolute;
+    top: 69px;
+    z-index: 0;
+
+    li {
+        text-align: center;
+        margin: 0;
+        width: 126px;
+
+        &:nth-child(3) {
+            width: 150px;
+
+            @media (min-width: $bp-m) {
+                width: 280px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            @include x-rem(font-size, 16px);
+        }
+    }
+
+    &.resources {
+        
+
+        @media (min-width: $bp-mw) {
+            width:90%;
+        }
+        @media (min-width: $bp-l) {
+            width:70%;
+        }
+
+        li {
+            text-align: center;
+            margin: 0;
+            width: 126px;
+
+            &:nth-child(4) {
+                width: 150px;
+
+                @media (min-width: $bp-m) {
+                    width: 320px;
+                }
+            }
+
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-image: url('../images/title-bf-mobile.svg');
+        height: 40px;
+        width: 24px;
+        left: -24px;
+        top: -1px;
+
+        @media (min-width: $bp-mw) {
+            background-image: url('../images/title-bf-desktop.svg');
+            height: 52px;
+            width: 31px;
+            left: -31px;
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-image: url('../images/title-af-mobile.svg');
+        height: 40px;
+        width: 24px;
+        right: -24px;
+        top: -1px;
+
+        @media (min-width: $bp-mw) {
+            background-image: url('../images/title-af-desktop.svg');
+            height: 52px;
+            width: 31px;
+            right: -31px;
+        }
+    }
+
+    @media (min-width: $bp-m) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    @media (min-width: $bp-mw) {
+        height: 52px;
+        width:60%;
+    }
+}
+
+.about {
+    section {
+        width: 100%;
+        padding: 50px 0;
+
+        @media (min-width: $bp-l) {
+            height: 100vh;
+            padding: 60px 0;
+        }
+
+        .section-title {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            margin: 0 0 20px;
+
+            h2 {
+                @include x-rem(font-size, 30px);
+                font-weight: $fontWeight-medium;
+                position: relative;
+                padding: 15px 0;
+                margin: 0 0 10px;
+                line-height: 30px;
+                text-transform: none;
+
+                &:after {
+                    content: '';
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: bottom center;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                @media (min-width: $bp-mw) {
+                    @include x-rem(font-size, 48px);
+                    line-height: 50px;
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+    
+    //THE CREW SECTION
+    .thecrew {
+        padding: 0;
+
+        @media (min-width: $bp-m) {
+            padding: 50px 0;
+
+            background-image: url('../images/the-crew-bg.png');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: -40px;
+
+        }
+
+        @media (min-width: $bp-mw) {
+            margin-top: -50px;
+        }
+
+        @media (min-width: $bp-l) {
+            padding: 60px 0;
+            margin-top: - 60px;
+        }
+
+        h2 {
+
+            &:after {
+                background-image: url('../images/title-the-crew-bg.svg');
+                width: 70px;
+                height: 7px;
+
+                @media (min-width: $bp-mw) {
+                    width: 112px;
+                    height: 11px;
+                }
+            }
+
+        }
+
+        .col-sm-6 {
+            @media (min-width: $bp-m) {
+                padding: 0 20px;
+            }
+
+            @media (min-width: $bp-l) {
+
+                padding: 0 10px 20px;
+
+
+            }
+        }
+
+        .member-crew {
+            width: 100%;
+            margin: 0 auto 30px;
+            position: relative;
+            padding: 0 0 35px;
+            max-width: 370px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: -10px;
+                z-index: 5;
+                background-image: url('../images/crew-lines.svg');
+                background-size: auto;
+                background-position: bottom right;
+                background-repeat: no-repeat;
+                width: 47px;
+                height: 96px;
+
+            }
+
+
+            .img-member {
+                position: relative;
+                width: 130px;
+                padding: 0 0 0 15px;
+
+                background-image: url('../images/crew-triangles.svg');
+                background-size: auto;
+                background-position: 0 15px;
+                background-repeat: no-repeat;
+
+                @media (min-width: $bp-l) {
+                    width: 260px
+                }
+
+                span {
+                    color: $color-invert;
+                    text-transform: uppercase;
+                    @include x-rem(font-size, 11px);
+
+                    @media (min-width: $bp-l) {
+                        @include x-rem(font-size, 13px);
+                    }
+
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    background-image: url('../images/crew-square-picture.svg');
+                    background-size: cover;
+                    height: 35px;
+                    width: 35px;
+                    top: 10px;
+                    right: -10px;
+                }
+
+            }
+
+            .member-info {
+                background-color: rgba($color-primary, 0.75);
+                padding: 15px;
+                position: relative;
+                width: calc(100% - 25px);
+                left: 25px;
+                top: -20px;
+
+                .member-place {
+                    position: absolute;
+                    height: 20px;
+                    padding: 0px 10px;
+                    top: -10px;
+                    @include x-rem(font-size, 16px);
+                    border-bottom: 20px solid $color-invert;
+                    border-right: 15px solid transparent;
+
+
+                }
+
+                h3 {
+                    margin: 10px 0;
+                    @include x-rem(font-size, 32px);
+                    line-height: 32px;
+                    font-weight: $fontWeight-semibold;
+
+                    span {
+                        color: $color-secondary;
+
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    @include x-rem(font-size, 16px);
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 11px;
+                    height: 262px;
+                    background-image: url('../images/crew-line.svg');
+                    background-size: cover;
+                    top: -7px;
+                    left: -6px;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 41px;
+                    height: 68px;
+                    background-image: url('../images/medalla.svg');
+                    background-size: cover;
+                    top: -18px;
+                    right: 15px;
+                }
+            }
+
+            .member-social {
+                position: relative;
+                left: 40px;
+                top: -10px;
+
+                ul {
+                    float: left;
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+
+                    li {
+                        float: left;
+                        margin: 0 10px 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    //THE GAME SECTION
+    .thegame {
+        padding: 20px 0 40px;
+
+        @media (min-width: $bp-m) {
+            padding: 40px 0 40px;
+        }
+
+        @media (min-width: $bp-mw) {
+            background-image: url('../images/the-game-bg.svg');
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 50px 0;
+        }
+
+        @media (min-width: $bp-l) {
+            padding: 60px 0;
+        }
+
+        h2 {
+
+            &:after {
+                background-image: url('../images/title-the-game-bg.svg');
+                width: 120px;
+                height: 8px;
+
+                @media (min-width: $bp-mw) {
+                    width: 190px;
+                    height: 14px;
+                }
+            }
+        }
+
+        .game-info {
+            max-width: 500px;
+            margin: 0 auto;
+
+            @media (min-width: $bp-m) {
+                width: 100%;
+                max-width: none;
+                float: left;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+        }
+
+        .img-game {
+            text-align: center;
+
+            @media (min-width: $bp-m) {
+                width: 50%;
+                float: left;
+                padding: 0 20px;
+                position: relative;
+                
+                img {
+                    max-width: 400px;
+                    width: 100%;
+                }
+            }
+
+            @media (min-width: $bp-l) {
+                padding: 0 40px;
+
+                img {
+                    max-width: 380px;
+                }
+
+
+            }
+        }
+
+        .text-game {
+            background: rgba(132, 141, 196, 0.2);
+            background: -moz-linear-gradient(45deg, rgba(132, 141, 196, 0.2) 0%, rgba(132, 141, 196, 0.19) 56%, rgba(212, 222, 238, 0.19) 100%);
+            background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(132, 141, 196, 0.2)), color-stop(56%, rgba(132, 141, 196, 0.19)), color-stop(100%, rgba(212, 222, 238, 0.19)));
+            background: -webkit-linear-gradient(45deg, rgba(132, 141, 196, 0.2) 0%, rgba(132, 141, 196, 0.19) 56%, rgba(212, 222, 238, 0.19) 100%);
+            background: -o-linear-gradient(45deg, rgba(132, 141, 196, 0.2) 0%, rgba(132, 141, 196, 0.19) 56%, rgba(212, 222, 238, 0.19) 100%);
+            background: -ms-linear-gradient(45deg, rgba(132, 141, 196, 0.2) 0%, rgba(132, 141, 196, 0.19) 56%, rgba(212, 222, 238, 0.19) 100%);
+            background: linear-gradient(45deg, rgba(132, 141, 196, 0.2) 0%, rgba(132, 141, 196, 0.19) 56%, rgba(212, 222, 238, 0.19) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#848dc4', endColorstr='#d4deee', GradientType=1);
+            border: 1px solid rgba($form-border, 0.25);
+            color: $color-invert;
+            padding: 30px 20px 20px;
+            position: relative;
+
+            left: 10px;
+            top: -10px;
+
+            @media (min-width: $bp-m) {
+                width: 50%;
+                float: left;
+                left: 0;
+                top: 0;
+                max-width: 375px;
+            }
+
+            @media (min-width: $bp-mw) {
+                &:after {
+                    content: '';
+                    background-image: url('../images/the-game-text-bg.svg');
+                    background-size: auto;
+                    position: absolute;
+                    bottom: 20px;
+                    right: 25px;
+                    width: 90px;
+                    height: 104px;
+                }
+            }
+
+            &:before {
+                content: '';
+                width: 241px;
+                height: 14px;
+                background-image: url('../images/the-game-bf.svg');
+                background-repeat: no-repeat;
+                background-size: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            h3 {
+                @include x-rem(font-size, 28px);
+                margin: 0 0 10px;
+                line-height: 28px;
+            }
+
+            p {
+                margin: 0;
+                @include x-rem(font-size, 16px);
+            }
+        }
+
+        .the-game-01 {
+            margin: 0 auto 20px;
+
+            @media (min-width: $bp-m) {
+                .img-game {
+                    text-align: right;
+                }
+            }
+        }
+
+        .the-game-02 {
+            @media (min-width: $bp-m) {
+                flex-direction: row-reverse;
+                top: -10px;
+
+                .img-game {
+                    text-align: left;
+                }
+            }
+
+            @media (min-width: $bp-l) {
+                top: -40px;
+           }
+        }
+    }
+
+    //WHITEPAPER SECTION
+    .whitepaper {
+        background-color: $color-invert;
+        border-top: 8px solid $color-primary;
+        border-bottom: 8px solid $color-primary;
+        background-image: url('../images/bg-whitepaper-mobile.svg');
+        background-size: auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        @media (min-width: $bp-m) {
+            background-image: url('../images/bg-whitepaper.svg');
+            background-size: cover;
+        }
+
+        h2 {
+            color: $color-primary;
+
+            &:after {
+                background-image: url('../images/title-white-paper-bg.svg');
+                width: 160px;
+                height: 8px;
+
+                @media (min-width: $bp-mw) {
+                    width: 260px;
+                    height: 14px;
+                }
+            }
+        }
+
+        .download-whitepaper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 0 0 40px;
+
+            a {
+                width: 100%;
+                max-width: 296px;
+                height: 317px;
+                background-image: url('../images/bg-btn-whitepaper.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                color: $color-primary;
+                text-align: center;
+                justify-content: center;
+                text-transform: uppercase;
+                @include x-rem(font-size, 22px);
+                text-decoration: none;
+
+                @media (min-width: $bp-mw) {
+                    max-width: 387px;
+                    height: 437px;
+                    @include x-rem(font-size, 32px);
+                }
+
+                img {
+                    margin: 0 auto 20px;
+                    max-width: 45px;
+
+                    @media (min-width: $bp-mw) {
+                        max-width: 60px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    //FAQS SECTION
+    .faqs {
+        overflow: hidden;
+        background-color: rgba($color-primary, 0.25);
+
+        h2 {
+            &:after {
+                background-image: url('../images/title-faqs-bg.svg');
+                width: 63px;
+                height: 9px;
+
+                @media (min-width: $bp-mw) {
+
+                    width: 100px;
+                    height: 15px;
+                }
+            }
+        }
+
+        .faq-container {
+            margin: 0 0 20px;
+
+            @media (min-width: $bp-m) {
+                padding: 0 10px;
+            }
+
+            h3 {
+                @include x-rem(font-size, 20px);
+                color: $color-invert;
+                background-image: url('../images/triangle-faq.svg');
+                background-position: 0 6px;
+                background-size: auto;
+                background-repeat: no-repeat;
+                padding: 0 0 0 25px;
+                margin: 0 0 10px;
+
+            }
+
+            .faq-answer {
+                margin: 0 0 0 25px;
+                padding: 0 30px 0 0;
+                background-image: url('../images/faq-answer.svg');
+                background-position: top right;
+                background-size: auto;
+                background-repeat: no-repeat;
+
+                p {
+                    margin: 0;
+                    background-color: rgba($color-invert, 0.25);
+                    padding: 12px 0 12px 15px;
+                }
+            }
+        }
+    }
+}
