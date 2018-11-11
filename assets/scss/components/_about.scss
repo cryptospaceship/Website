@@ -104,6 +104,9 @@
 
     @media (min-width: $bp-mw) {
         height: 52px;
+        width:80%;
+    }
+    @media (min-width: $bp-l) {
         width:60%;
     }
 }

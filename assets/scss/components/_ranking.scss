@@ -1,0 +1,190 @@
+/* ******************************************************
+   RANKING
+   ****************************************************** */
+
+.overal-ranking {
+    .section-title {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 20px;
+
+        h2 {
+            @include x-rem(font-size, 30px);
+            font-weight: $fontWeight-medium;
+            position: relative;
+            padding: 15px 0;
+            margin: 0 0 10px;
+            line-height: 30px;
+            text-transform: none;
+            text-transform: uppercase;
+
+            &:after {
+                content: '';
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom center;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-image: url('../images/overal-ranking-line.svg');
+                width: 205px;
+                height: 8px;
+
+                @media (min-width: $bp-mw) {
+                    width: 336px;
+                    height: 13px;
+                }
+
+            }
+
+            @media (min-width: $bp-mw) {
+                @include x-rem(font-size, 48px);
+                line-height: 50px;
+                padding: 20px 0;
+            }
+        }
+    }
+
+    .table-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+
+        table {
+            float: left;
+            margin: 20px 0;
+            border: 0;
+            border-collapse: collapse;
+            width: 100%;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 24px;
+                background-size: auto;
+                background-repeat: no-repeat;
+                background-position: top center;
+                top:-10px;
+                z-index: 2;
+                left: -30px;
+                height: 281px;
+                background-image: url('../images/signup-line-mobile.svg');
+
+                @media (min-width: $bp-m) {
+                    height: 359px;
+                    background-image: url('../images/signup-line-desktop.svg');
+                }
+            }
+
+            thead {
+                background-color: rgba($color-primary, 0.75);
+
+                th {
+                    color: $color-invert;
+                    padding: 7px 14px;
+                    @include x-rem(font-size, 18px);
+                    text-align: left;
+                    font-weight: $fontWeight-medium;
+                    border: 1px solid $color-invert;
+                    width: 20%;
+
+                    @media (min-width: $bp-mw) {
+                        @include x-rem(font-size, 24px);
+                    }
+                }
+            }
+
+            tbody {
+                td {
+                    padding: 7px 14px;
+                    @include x-rem(font-size, 16px);
+                    border: 1px solid $color-invert;
+                    color: $color-invert;
+                    background-color: transparent;
+
+                    @media (min-width: $bp-mw) {
+                        @include x-rem(font-size, 18px);
+                    }
+                }
+            }
+        }
+
+        .pagination-container {
+            float: left;
+            width:100%;
+            margin:  0;
+
+            p {
+                float: left;
+                margin:0;
+                @include x-rem(font-size, 16px);
+            }
+
+            .pagination {
+                float: right;
+
+                ul {
+                    float: left;
+                    list-style-type: none;
+                    margin:0;
+                    padding:0;
+
+                    li {
+                        float: left;
+                        margin:0 0 0 10px ;
+
+                        a {
+                            color:$color-invert;
+                            float: left;
+                            width:30px;
+                            height: 30px;
+                            background-color:rgba($color-primary, 0.25);
+                            border:1px solid $color-primary;
+                            @include x-rem(font-size, 18px);
+                            line-height: 30px;
+                            text-align: center;
+                            text-decoration: none;
+
+                            &.active, &:hover {
+                                background-color:$color-primary;
+                            }
+                            
+                            &.arrow-prev {
+                                background: url('../images/pag-arrow-prev.svg') center center no-repeat;
+                                border:none;
+                                background-color:none;
+
+                                &:hover {
+                                    background: url('../images/pag-arrow-prev-hover.svg') center center no-repeat;
+                                }
+
+                                &.disable {
+                                    background: url('../images/pag-arrow-prev-disable.svg') center center no-repeat;
+                                }
+                            }
+
+                            &.arrow-next {
+                                background: url('../images/pag-arrow-next.svg') center center no-repeat;
+                                border:none;
+                                background-color:none;
+
+                                &:hover {
+                                    background: url('../images/pag-arrow-next-hover.svg') center center no-repeat;
+                                }
+
+                                &.disable {
+                                    background: url('../images/pag-arrow-next-disable.svg') center center no-repeat;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
