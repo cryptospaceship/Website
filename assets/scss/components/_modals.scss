@@ -39,9 +39,94 @@
                 max-width: 860px;
             }
 
+            .form-modal {
+                max-width: 860px;
+            }
+        }
+
+        &.email {
+            max-width: 320px;
+
+            @media (min-width: $bp-m) {
+                max-width: 650px;
+            }
+
+            @media (min-width: $bp-l) {
+                max-width: 860px;
+            }
 
             .form-modal {
                 max-width: 860px;
+            }
+
+            .group-input {
+                label {
+                    float: left;
+                    width: 100px;
+                    padding: 7px 0;
+                    margin: 0;
+                }
+
+                input[type="text"] {
+                    float: left;
+                    width: calc(100% - 100px);
+                    clear: none;
+                }
+
+                &.message {
+                    label {
+                        display: none;
+                    }
+
+                    textarea {
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    float: left;
+                    width: 100px;
+                    padding: 7px 0;
+                    margin: 0;
+                    color: #060816;
+
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-weight: $fontWeight-light;
+                    color: $color-secondary;
+
+                    @include x-rem(font-size, 20px);
+                    line-height: 20px;
+
+                    @media (min-width: $bp-m) {
+                        @include x-rem(font-size, 24px);
+                        line-height: 26px;
+                    }
+                }
+                .info-message {
+                    padding: 5px 10px;
+                    float: left;
+                    width: calc(100% - 100px);
+                    background: #FFFFFF;
+                    @include x-rem(font-size, 18px);
+                    height: 35px;
+
+                    @media (min-width: $bp-m) {
+                        @include x-rem(font-size, 24px);
+                        height: 40px;
+                    }
+
+                    &.large {
+                        min-height:100px;
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .replay {
+                float: left;
+                margin: 0 10px 0 0; 
             }
         }
     }
@@ -137,11 +222,12 @@
             label {
                 float: left;
                 clear: none;
-                width:auto; 
+                width: auto;
                 @include x-rem(font-size, 18px);
                 font-weight: $fontWeight-light;
-                margin:0;
+                margin: 0;
             }
+
             input[type="checkbox"] {
                 float: left;
                 margin: 3px 6px 0 0;
@@ -183,10 +269,10 @@
                 width: 49%;
                 height: 60px;
                 padding: 20px 30px;
+                @include x-rem(font-size,
+            24px);
             }
         }
-
-
     }
 
     .column {

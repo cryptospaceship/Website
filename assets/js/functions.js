@@ -4445,7 +4445,9 @@
     $(".exit-game").colorbox({ inline: true, closeButton: false, arrowKey: false, overlayClose: false });
     $(".join-game").colorbox({ inline: true, closeButton: false, arrowKey: false, overlayClose: false });
     $(".modulo-qia").colorbox({ inline: true, closeButton: false, arrowKey: false, overlayClose: false });
-
+    $(".new-message").colorbox({ inline: true, closeButton: false, arrowKey: false, overlayClose: false });
+    $(".message-content").colorbox({ inline: true, closeButton: false, arrowKey: false, overlayClose: false });
+    
     $(".closeModal").click(function(e) {
         $.colorbox.close();
     });
