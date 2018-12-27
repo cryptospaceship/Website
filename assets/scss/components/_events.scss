@@ -1,0 +1,88 @@
+/* ================================================================
+   Events Tables
+   ================================================================ */
+.table-events {
+
+    table {
+        margin: 0;
+        @include x-rem(font-size, 18px);
+        border: 1px solid $color-secondary;
+        border-collapse: collapse;
+        margin: 10px auto;
+        width: 100%;
+        min-width: 500px;
+        float: left;
+
+        th {
+            background-color: $color-secondary;
+            color: $color-invert;
+            @include x-rem(font-size, 22px);
+            font-weight: $fontWeight-medium;
+            padding: 7px;
+        }
+
+        td {
+            padding: 7px;
+            @include x-rem(font-size, 18px);
+            background-color: transparent;
+            border: 1px solid $color-secondary;
+
+            &:first-child {
+                width: 25%;
+            }
+
+            &.subtitle {
+                text-align:center;
+                background-color:rgba($color-secondary, 0.15);
+                font-weight:$fontWeight-medium;
+            }
+
+            ul {
+                list-style-type: none;
+                margin:0;
+                padding:0;
+                float: left;
+
+                li {
+                    color:$color-secondary;
+                    float: left;
+                    padding:0 0 0 25px;
+                    margin: 0 15px 0 0;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+
+                    &.e {
+                        background-image: url('../images/e.svg');
+                    }
+                    &.g {
+                        background-image: url('../images/g.svg');
+                    }
+                    &.m {
+                        background-image: url('../images/m.svg');
+                    }
+                }
+            }
+        }
+    }
+
+    .column {
+        table {
+            width: 100%;
+            min-width: initial;
+        }
+    }
+    .closeModal {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        height: 20px;
+        width: 20px;
+        background-image: url('../images/close.svg');
+        background-repeat: no-repeat;
+        background-size: 20px;
+
+        &:hover {
+            background-image: url('../images/close-hover.svg');
+        }
+    }
+}

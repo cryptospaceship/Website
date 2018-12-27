@@ -129,6 +129,26 @@
                 margin: 0 10px 0 0; 
             }
         }
+
+        &.table-events {
+            max-width: 320px;
+
+            @media (min-width: $bp-m) {
+                max-width: 650px;
+            }
+
+            @media (min-width: $bp-l) {
+                max-width: 860px;
+            }
+
+            .form-modal {
+                max-width: 860px;
+
+                @media (min-width: $bp-l) {
+                    padding:40px;
+                }
+            }
+        }
     }
 
     .form-modal {
@@ -138,7 +158,6 @@
         padding: 25px 15px;
         margin: 0 0 10px;
         border: 1px solid $form-border;
-        width: 100%;
         max-width: 330px;
         position: relative;
         color: $color-secondary;
@@ -286,7 +305,14 @@
 
         @media (min-width: $bp-m) {
             width: 49%;
-            margin: 0 1% 0 0;
+
+            &:first-child {
+                margin: 0 1% 0 0;
+            }
+            &:last-child {
+                margin: 0 0 0 1%;
+            }
+            
         }
 
         .points {
